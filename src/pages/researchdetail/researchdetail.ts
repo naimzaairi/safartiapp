@@ -70,6 +70,29 @@ export class ResearchDetailPage {
     toast.present();
   }
 
+  appelerOrganisateur() {
+    let alert = this.alertCtrl.create({
+      title: '06 52 91 11 85',
+      buttons: [
+        {
+          text: 'Annuler',
+          role: 'cancel',
+          handler: () => {
+            console.log('Cancel clicked');
+          }
+        },
+        {
+          text: 'Appeler',
+          handler: () => {
+            console.log('confirm clicked');
+            //Utiliser API pour appeler
+          }
+        }
+      ]
+    });
+    alert.present();
+  }
+
 
 
   /*participer(voyage_id){

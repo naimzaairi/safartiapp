@@ -35,8 +35,13 @@
 
                 <ion-item>
                   <ion-label class="form-label">Prix</ion-label>
-                  <ion-input text-input-ios-margin-right type="number" ng-model="amount" aria-label="amount"><span id="currency-default">{{amount | currency}}</span></ion-input>
+                  <ion-input id="price" text-input-ios-margin-left type="number" ng-model="amount" aria-label="amount"><span id="currency-default">{{amount | currency}}</span></ion-input>
                   <span item-end class="form-label">DHS</span>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label class="form-label">Places</ion-label>
+                    <ion-input type="number"></ion-input>
                 </ion-item>
 
                 <ion-item>

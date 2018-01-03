@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Détail</ion-title>
+    <ion-title>Détails du voyage</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -29,32 +29,39 @@
       </ion-row>
     </ion-grid>
 </ion-card>
-<button ion-button full>Annuler Voyage</button>
+<button ion-button full (tap)="annulerVoyage()">Annuler Voyage</button>
 
 
 <h1> Les participants </h1>
 
   <ion-card>
-    <ion-card-header>
-      Abdelilah Benhima
-    </ion-card-header>
-    <ion-card-content>
-      <ion-icon name="call"></ion-icon> <h3 class="inline">Téléphone: 06 52 78 23</h3> <br/>
-
-      <ion-icon name="mail"></ion-icon> <h3 class="inline">Mail: a.benhimah@gmail.com</h3>  
-    </ion-card-content>
+      <ion-item id="org-header">
+          <ion-avatar item-start>
+            <img src="../assets/images/abd.jpg">
+          </ion-avatar>
+            <h2 id="org-name">Abdelilah Benhima</h2>
+        </ion-item>
+    
+        <ion-card-content>
+          <ion-row>
+            <ion-icon name="call" class="org-info-icon"></ion-icon><h3 class="org-info"> 06 52 91 11 85</h3>
+          </ion-row>
+          <ion-row>
+              <ion-icon name="mail" class="org-info-icon"></ion-icon> <h3 class="org-info"> n.zaairi96@gmail.com</h3>
+          </ion-row> 
+        </ion-card-content>
 
     <ion-row>
 
     <ion-col>
       <button ion-button icon-left clear class="text-vert">
         <ion-icon name="call"></ion-icon>
-        <div class="text-vert">Appeler</div>
+        <div class="text-vert" (tap)="appelerParticipant()">Appeler</div>
       </button>
     </ion-col>
 
     <ion-col>
-      <button ion-button icon-left clear type="submit">
+      <button ion-button icon-left clear type="submit" (tap)="supprimerParticipant()">
         <ion-icon name="close-circle"></ion-icon>
         <div>Supprimer</div>
       </button>

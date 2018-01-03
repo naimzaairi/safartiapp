@@ -46,4 +46,17 @@ page-createvoyage{
         height: 4.9em;
     }
 
+    ion-input#price > input.text-input.text-input-ios.ng-valid.ng-dirty.ng-touched{
+        margin-left: 75%;
+    }
+
+    ion-input#price > input.text-input.text-input-md.ng-valid.ng-dirty.ng-touched{
+        margin-left: 75%;
+    }
+
+    ion-input#price > input.text-input.text-input-wp.ng-valid.ng-dirty.ng-touched{
+        margin-left: 75%;
+    }
+
+
 }

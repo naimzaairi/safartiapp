@@ -1,5 +1,17 @@
 page-mvoypreparant{
 
+    @import url('https://fonts.googleapis.com/css?family=Dosis:300');
+
+
+    .scroll-content{
+        background: #EEEEEE;
+    }
+
+    h1{
+        font-family: 'Dosis', sans-serif;
+        font-weight: bold;
+    }
+
     .text-vert{
         color: green;
     }
@@ -10,6 +22,10 @@ page-mvoypreparant{
 
     .inline{
         display: inline ;
+    }
+
+    ion-col[col-2]{
+        padding-left: 8%;
     }
 
     ion-icon#car-icon{
@@ -26,6 +42,35 @@ page-mvoypreparant{
 
     .voyage-info{
         text-align: center;
+    }
+
+    #org-header{
+        font-family: 'Dosis', sans-serif;
+    }
+
+    .org-info{
+        font-weight: bold;
+    }
+
+    .org-info-icon{
+        margin-right: 5%;
+        font-size: 20px;
+    }
+
+    #info-sup-title{
+        font-family: 'Dosis', sans-serif;
+        font-size: 16px;
+        margin-top: 3%;
+        font-weight: bold;
+    }
+
+    #info-sup-p{
+        padding: 2%;
+        width: 100%;
+    }
+
+    #org-name{
+        font-weight: bold;
     }
 
 }
