@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Accueil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <h2>Créer un voyage:</h2>
+
+    <ion-list>
+
+        <div id="home-form">
+           <ion-list id="create-form">
+
+              <ion-item>
+                  <ion-label class="form-label">Départ</ion-label>
+                  <ion-input type="text"></ion-input>
+              </ion-item>
+
+                <ion-item>
+                    <ion-label class="form-label">Destination</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label class="form-label">Date</ion-label>
+                  <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="myDate"></ion-datetime>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label class="form-label">Heure</ion-label>
+                  <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="myDate"></ion-datetime>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label class="form-label">Prix</ion-label>
+                  <ion-input text-input-ios-margin-right type="number" ng-model="amount" aria-label="amount"><span id="currency-default">{{amount | currency}}</span></ion-input>
+                  <span item-end class="form-label">DHS</span>
+                </ion-item>
+
+                <ion-item>
+                    <ion-label class="form-label">Rendez-vous</ion-label>
+                    <ion-input type="text"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-textarea placeholder="Informations supplémentaires" type="text"></ion-textarea>
+                </ion-item>
+
+                <button class="btn-red" ion-button full color="primary">Je crée mon voyage !</button>
+
+            </ion-list>
+
+        </div>
+        
+    </ion-list>
+  
+
+</ion-content>

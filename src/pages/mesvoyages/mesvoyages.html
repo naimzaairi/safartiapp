@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Mes Voyages
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-segment [(ngModel)]="mesvoyages">
+    <ion-segment-button value="preparant">
+      Je prépare
+    </ion-segment-button>
+    <ion-segment-button value="participant">
+      Je participe
+    </ion-segment-button>
+  </ion-segment>
+
+<div [ngSwitch]="mesvoyages">
+  <ion-list *ngSwitchCase="'preparant'">
+      <button ion-item (tap)="showMVoyPreparant()">
+          <h2 id="trajet-title">Casablanca - Marrakech</h2>
+          <span> 27/12/2017</span> - <span> 13:30 </span>
+          <div id="badges-block">
+            <ion-badge id="badge-available" class="badge">3 participants</ion-badge>
+            <ion-badge class="badge">1 disponible</ion-badge>
+          </div>
+      </button>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'participant'">
+    <button ion-item (tap)="showMVoyParticipant()">
+        <h2 id="trajet-title">Marrakech - Tetouan</h2>
+        <span> 27/12/2017</span> - <span> 10:30 </span>
+        <p>Abdelillah Benhima</p>
+    </button>
+  </ion-list>
+</div>
+
+</ion-content>

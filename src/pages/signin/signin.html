@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Connexion</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding="">
+
+    <div>
+        <ion-img id="logo" style="width: 100px; height: 100px;" src="assets/images/lotoS.png"></ion-img>
+    </div>
+
+    <ion-list>
+
+        <div id="menu-signin">
+           <ion-list>
+                <div id="text-block">
+                    <h1>Bienvenue</h1>
+                    <h2>Veuillez vous connecter.</h2>
+                </div>
+
+                <ion-item id="first-input">
+                    <ion-input class="form-label" type="text" value="" placeholder="Email"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                    <ion-input class="form-label" type="password"  placeholder="Mot de passe"></ion-input>
+                </ion-item>
+
+                <button class="btn-red" (tap)="showTabsPage()" ion-button full>Se connecter</button>
+                <div id="mdp-lost-block">
+                    <p>Vous avez oublié votre mot de passe ? <br />Ce n'est pas grave</p>
+                    <button ion-button color="primary" clear>Appuyez-ici </button>
+                </div>
+            </ion-list>
+        </div>
+        
+    </ion-list>
+  
+
+</ion-content>

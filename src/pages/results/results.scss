@@ -1,0 +1,66 @@
+page-results {
+
+    .btn-red{
+        display: block;
+        margin-top: 20px;
+        background-color: #B71C1C;
+    }
+
+    ion-img{
+        background: none;
+        display: block;
+        position:absolute;
+        left: 0;
+        right: 0;
+        margin:0 auto;
+        top:20%;
+        transform:translateY(-50%);
+    }
+
+    ion-icon{
+        font-size: 25px;
+    }
+
+    .trajet-title{
+        font-weight: bold;
+    }
+
+    #price{
+        font-size: 16px;
+    }
+
+    #schedule{
+        font-weight: bold;
+    }
+
+    .item-ios ion-avatar ion-img, .item-ios ion-avatar img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .item-md ion-avatar ion-img, .item-md ion-avatar img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    @media only screen and (max-device-width : 320px)
+    and (orientation : portrait) { 
+
+        .item-ios{
+            padding-left: 0px;
+        }
+
+        #price{
+            font-size: 14px;
+        }
+
+        button.item-ios:not([detail-none]) .item-inner{
+            padding-right: 0px;
+        }
+    }
+
+}

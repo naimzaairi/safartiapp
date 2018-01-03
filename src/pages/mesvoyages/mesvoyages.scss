@@ -1,0 +1,27 @@
+page-mesvoyages {
+
+    @import url('https://fonts.googleapis.com/css?family=Dosis:300');
+
+    .font{
+        font-family: 'Dosis', sans-serif;
+        font-size: 24px;
+    }
+
+    #trajet-title{
+        font-weight: bold;
+    }
+
+    #badges-block{
+        display: block;
+    }
+
+    #badge-available{
+        background-color: #b71C1C;
+    }
+
+    .badge{
+        width: fit-content;
+        background-color: #000;
+    }
+
+}

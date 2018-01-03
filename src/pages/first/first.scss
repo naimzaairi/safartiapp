@@ -1,0 +1,75 @@
+page-first {
+
+    $colors: (
+        primary:    #B71C1C,
+        secondary:  #32db64,
+        danger:     #f53d3d,
+        light:      #f4f4f4,
+        dark:       #222
+    );
+
+    @import url('https://fonts.googleapis.com/css?family=Dosis:300');
+
+
+    .btn-red{
+        display: block;
+        margin-top: 4%;
+        background-color: #B71C1C;
+    }
+
+    ion-img{
+        background: none;
+        display: block;
+        position:absolute;
+        left: 0;
+        right: 0;
+        margin:0 auto;
+        top:20%;
+        transform:translateY(-50%);
+    }
+
+    .text-primary{
+        color: #B71C1C;
+    }
+
+    #logo > img{
+        width: 250px;
+        height: 110px;
+    }
+
+    #menu-boutons{
+        display: block;
+        margin-top: 60%;
+        
+    }
+
+    #boutons-block{
+        margin-top: 10%;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #text-block{
+        font-family: 'Dosis', sans-serif;
+    }
+
+    #text-block h3{
+        text-align: justify;
+    }
+
+    #text-block h1{
+        text-align: center;
+    }
+
+    #copyright-bottom{
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        width: 100%;
+        font-family: 'Dosis', sans-serif;
+        font-size: 16px;
+    }
+
+
+}

@@ -1,0 +1,28 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content padding>
+
+    <div>
+        <ion-img id="logo" style="width: 250px; height: 110px;" src="assets/images/safartilogor.png"></ion-img>
+    </div>
+
+    <ion-list id="menu-boutons">
+        <div id="text-block">
+            <h1>Votre application de Shut.</h1>
+            <h2><span class="text-primary">Partagez</span> ou <span class="text-primary">Participez</span>, c'est à vous de décider!</h2>
+        </div>
+
+        <div id="boutons-block">
+            <button (tap)="showSigninPage()" class="btn-red" ion-button full>Se connecter</button>
+            <button (tap)="showSignupPage()" class="btn-red" ion-button full>S'inscrire !</button>
+            <button ion-button color="primary" clear>C'est quoi Safarti ?</button>
+        </div>
+        
+    </ion-list>
+
+    <div id="copyright-bottom"><p>© Copyright NA Company</p></div>
+  
+
+</ion-content>

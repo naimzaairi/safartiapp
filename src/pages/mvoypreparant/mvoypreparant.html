@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Détail</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<h1> Résumé du voyage</h1>
+
+<ion-card>
+
+  <ion-grid>
+    <ion-row align-items-center>
+        <ion-col col-2>
+              <ion-avatar item-start>
+                  <ion-icon name="car" class="icon-size" id="car-icon"></ion-icon>
+                </ion-avatar>
+        </ion-col>
+        <ion-col col-10>
+              <div class="voyage-info">
+                  <p id="trajet-cities">Casablanca - Marrakech</p>
+                  <p>Jour: 27/12/2017</p>
+                  <p>Heure: 13:30 </p>
+                </div>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+      </ion-row>
+    </ion-grid>
+</ion-card>
+<button ion-button full>Annuler Voyage</button>
+
+
+<h1> Les participants </h1>
+
+  <ion-card>
+    <ion-card-header>
+      Abdelilah Benhima
+    </ion-card-header>
+    <ion-card-content>
+      <ion-icon name="call"></ion-icon> <h3 class="inline">Téléphone: 06 52 78 23</h3> <br/>
+
+      <ion-icon name="mail"></ion-icon> <h3 class="inline">Mail: a.benhimah@gmail.com</h3>  
+    </ion-card-content>
+
+    <ion-row>
+
+    <ion-col>
+      <button ion-button icon-left clear class="text-vert">
+        <ion-icon name="call"></ion-icon>
+        <div class="text-vert">Appeler</div>
+      </button>
+    </ion-col>
+
+    <ion-col>
+      <button ion-button icon-left clear type="submit">
+        <ion-icon name="close-circle"></ion-icon>
+        <div>Supprimer</div>
+      </button>
+    </ion-col>
+
+  </ion-row>
+  </ion-card>  
+
+</ion-content>

@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Détail du voyage </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+
+<div>
+<ion-card>
+
+  <ion-card-content>
+
+    <ion-grid>
+      <ion-row align-items-center>
+        <ion-col col-2>
+            <ion-avatar item-start>
+                <ion-icon name="car" class="icon-size" id="car-icon"></ion-icon>
+              </ion-avatar>
+        </ion-col>
+        <ion-col col-10>
+            <div class="voyage-info">
+                <p id="trajet-cities">Casablanca - Marrakech</p>
+                <p>Jour: 27/12/2017</p>
+                <p>Heure: 13:30 </p>
+              </div>
+        </ion-col>
+      </ion-row>
+      <ion-row justify-content-center>
+        <ion-badge item-end id="price">80 DHS</ion-badge>
+      </ion-row>
+    </ion-grid>
+  
+  </ion-card-content>
+
+
+</ion-card>
+
+<h1> L'organisateur </h1>
+
+  <ion-card>
+
+    <ion-item id="org-header">
+      <ion-avatar item-start>
+        <img src="../assets/images/naim.jpg">
+      </ion-avatar>
+        <h2>Naïm Zaaïri</h2>
+        <p>BMW Serie 1</p>
+    </ion-item>
+
+    <ion-card-content>
+      <ion-row>
+        <ion-icon name="call" class="org-info-icon"></ion-icon><h3 class="org-info"> 06 52 91 11 85</h3>
+      </ion-row>
+      <ion-row>
+          <ion-icon name="mail" class="org-info-icon"></ion-icon> <h3 class="org-info"> n.zaairi96@gmail.com</h3>
+      </ion-row> 
+      <ion-row>
+        <h3 id="info-sup-title">Point de rendez-vous:</h3>
+        <p id="info-sup-p">A convenir. Veuillez appeler l'organisateur.</p>
+      </ion-row>
+      <ion-row>
+        <h3 id="info-sup-title">Informations supplémentaires:</h3>
+        <p id="info-sup-p">S'il vous plait soyez à l'heure au point de RDV. Ne mangez pas dans la voiture.</p>
+      </ion-row>
+    </ion-card-content>
+
+    <ion-row>
+
+      <ion-col>
+        <button ion-button full round class="organisateur-button" id="participate-button" (tap)="participerConfirm()">Participer</button>
+      </ion-col>
+
+      <ion-col>
+        <button ion-button full round color="light"class="organisateur-button" id="call-button">Appeler</button>
+      </ion-col>
+
+    </ion-row>
+</ion-card>      
+</div>
+
+</ion-content>

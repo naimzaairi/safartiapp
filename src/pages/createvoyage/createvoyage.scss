@@ -1,0 +1,49 @@
+page-createvoyage{
+
+    @import url('https://fonts.googleapis.com/css?family=Dosis');
+
+    .scroll-content{
+        background: #EEEEEE;
+    }
+
+    h2{
+        font-family: 'Dosis', sans-serif;
+        font-weight: 800;
+    }
+
+    #create-form > ion-item{
+        margin-bottom: 1%;
+    }
+
+    .form-label{
+        font-family: 'Dosis', sans-serif;
+        font-size: 18px;
+    }
+
+    .item-ios.item-block .item-inner{
+        border-bottom: none;
+    }
+
+    .item-android.item-block .item-inner{
+        border-bottom: none;
+    }
+
+    .text-input-wp{
+        border: none;
+    }
+
+    .btn-red{
+        display: block;
+        margin-top: 20px;
+    }
+
+    textarea.text-input{
+        font-size: 12px;
+        height: 100%;
+    }
+
+    .item.item-textarea{
+        height: 4.9em;
+    }
+
+}

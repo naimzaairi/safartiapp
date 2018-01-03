@@ -1,0 +1,80 @@
+page-home {
+
+  /*[_nghost-c1] {
+    background-color: color($colors, primary);
+    border-radius: 40px;
+    font-size: 14px;
+    color: #fff;
+}
+[_nghost-c1] .ng2-tag-input-remove[_ngcontent-c1] {
+    color: color($colors, primary);
+    background: #fff;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+}*/
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:300');
+
+
+    .btn-red{
+        display: block;
+        margin-top: 20px;
+        background-color: #B71C1C;
+        font-size: 18px;
+    }
+
+    ion-img{
+        background: none;
+        display: block;
+        position:absolute;
+        left: 0;
+        right: 0;
+        margin:0 auto;
+        top:15%;
+        transform:translateY(-50%);
+    }
+
+    #text-block h2{
+        font-family: 'Dosis', sans-serif;
+        text-align: center;
+        margin-top: 30%;
+    }
+
+    .searchbar-ios{
+      background: none;
+      border: 2px solid #BDBDBD;
+    }
+
+    ion-label{
+      font-size: 22px;
+      font-family: 'Dosis', sans-serif;
+    }
+    
+    #logo > img{
+        width: 150px;
+        height: 60px;
+        margin: 0 auto;
+    }
+
+    #home-form{
+        display: block;
+        margin-top: 7%;
+    }
+
+    #list-form{
+        margin-bottom: 6%;
+    }
+
+    #btn-create{
+        display: block;
+        margin: 0 auto;
+    }
+
+    ion-navbar {
+      height: 50px;
+  }
+
+
+
+}
