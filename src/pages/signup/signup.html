@@ -25,6 +25,11 @@
 
     <ion-list>
         <ion-item>
+            <input class="bottom-marg-15" type="file" name="file" file="file">
+            <button class="button button-small button-full button-positive" ng-disabled="file.size&amp;&amp;false || uploadProgress&gt;0" ng-click="upload()" ng-cloak="">Upload</button>
+            <img class="fit" ng-if="uploadUri" ng-src="">
+        </ion-item>
+        <ion-item>
             <ion-label class="form-label" fixed>Nom </ion-label>
             <ion-input type="text" value=""></ion-input>
         </ion-item>
@@ -55,13 +60,13 @@
         </ion-item>-->
         <div ng-controller="AjaxCtrl" >
             <ion-item id="country" ng-model="country" ng-options="country for country in countries">
-                <ion-label>Country</ion-label>
+                <ion-label class="form-label" fixed>Marques</ion-label>
                     <ion-select >
                         <ion-option value="">{{ country }}</ion-option>
                 </ion-select>
             </ion-item>
             <ion-item>
-                    <ion-label>City</ion-label>
+                    <ion-label class="form-label" fixed>Modèle</ion-label>
                     <ion-select id="city" ng-disabled="!cities" ng-model="city" ng-options="city for city in cities">
                         <ion-option value="">{{ city }}</ion-option>
                     </ion-select>

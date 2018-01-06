@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.safartiapp662016" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>Safarti</name>
-  <description>An NA Company App. Application de covoiturage</description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">NA Company</author>
+  <description>Application de covoiturage. A NA Company App</description>
+  <author email="na.company.ma@gmail.com" href="">NA Company</author>
   <content src="index.html"/>
   <access origin="*"/>
   <allow-intent href="http://*/*"/>

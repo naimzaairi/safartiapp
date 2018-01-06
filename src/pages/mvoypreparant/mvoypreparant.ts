@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController,ToastController ,NavParams } from 'ionic-angular';
+import { NavController, AlertController,ToastController } from 'ionic-angular';
 //import  { VoyageService } from '../../services/voyage-service';
-import { MesVoyagesPage } from '../mesvoyages/mesvoyages';
+//import { MesVoyagesPage } from '../mesvoyages/mesvoyages';
 
 @Component({
   selector: 'page-mvoypreparant',
