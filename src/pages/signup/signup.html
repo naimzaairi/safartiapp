@@ -24,11 +24,12 @@
     <h2 class="text-red"> Veuillez remplir les informations</h2>
 
     <ion-list>
-        <ion-item>
-            <input class="bottom-marg-15" type="file" name="file" file="file">
-            <button class="button button-small button-full button-positive" ng-disabled="file.size&amp;&amp;false || uploadProgress&gt;0" ng-click="upload()" ng-cloak="">Upload</button>
-            <img class="fit" ng-if="uploadUri" ng-src="">
-        </ion-item>
+
+        <div id="photo-loader">
+            <ion-label class="form-label">Photo de profil</ion-label>
+            <img id="image-loaded" [src]="base64Image" *ngIf="base64Image" (click)="accessGallery()" />
+            <button id="choose-btn" ion-button color="primary" (click)="accessGallery()">Choisir</button>
+        </div>
         <ion-item>
             <ion-label class="form-label" fixed>Nom </ion-label>
             <ion-input type="text" value=""></ion-input>
