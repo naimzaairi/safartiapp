@@ -55,14 +55,17 @@ page-signup {
     }
 
     #image-loaded{
+        height: 30vw;
+        width: 30vw;
         border-radius: 50%;
-        width: 100px;
-        height: 100px;
+        border: 1px solid #BDBDBD;
+        overflow: hidden;
+        object-fit: resize;
     }
 
-    #photo-loader > img{
+    /*#photo-loader > img{
         overflow: hidden
-    }
+    }*/
 
     #photo-loader{
         display: flex;

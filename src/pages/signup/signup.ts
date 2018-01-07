@@ -24,7 +24,9 @@ export class SignupPage {
      }).then((imageData) => {
        this.base64Image = 'data:image/jpeg;base64,'+imageData;
        var chooseBtn = document.getElementById('choose-btn');
+       var photoLbl = document.getElementById('lbl-photo');
        chooseBtn.style.display = "none";
+       photoLbl.style.display = "none";
       }, (err) => {
        console.log(err);
      });

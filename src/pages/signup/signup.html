@@ -25,9 +25,9 @@
 
     <ion-list>
 
-        <div id="photo-loader">
-            <ion-label class="form-label">Photo de profil</ion-label>
-            <img id="image-loaded" [src]="base64Image" *ngIf="base64Image" (click)="accessGallery()" />
+        <div id="photo-loader"> 
+            <ion-label id="lbl-photo" class="form-label">Photo de profil</ion-label>
+            <img id="image-loaded" [src]="base64Image" *ngIf="base64Image" (click)="accessGallery()"/>
             <button id="choose-btn" ion-button color="primary" (click)="accessGallery()">Choisir</button>
         </div>
         <ion-item>
