@@ -16,6 +16,9 @@ import { ResearchDetailPage } from '../pages/researchdetail/researchdetail';
 import { MVoyParticipantPage } from '../pages/mvoyparticipant/mvoyparticipant';
 import { MVoyPreparantPage } from '../pages/mvoypreparant/mvoypreparant';
 import { ForgotPasswordPage } from '../pages/forgotpassword/forgotpassword';
+import { MyAccountPage } from '../pages/myaccount/myaccount';
+import { ModifyAccountPage } from '../pages/modifyaccount/modifyaccount';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,7 +39,9 @@ import { Camera } from '@ionic-native/camera';
     ResearchDetailPage,
     MVoyParticipantPage,
     MVoyPreparantPage,
-    ForgotPasswordPage
+    ForgotPasswordPage,
+    MyAccountPage,
+    ModifyAccountPage
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,9 @@ import { Camera } from '@ionic-native/camera';
     ResearchDetailPage,
     MVoyParticipantPage,
     MVoyPreparantPage,
-    ForgotPasswordPage
+    ForgotPasswordPage,
+    MyAccountPage,
+    ModifyAccountPage
   ],
   providers: [
     StatusBar,

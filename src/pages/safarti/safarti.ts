@@ -3,7 +3,8 @@ import { NavController } from 'ionic-angular';
 import { AlertController, App } from 'ionic-angular';
 
 import { FirstPage } from '../first/first';
-import { TabsPage } from '../tabs/tabs';
+import { MyAccountPage } from '../myaccount/myaccount';
+
 
 
 @Component({
@@ -17,6 +18,7 @@ export class SafartiPage {
   }
 
   items = [
+    "Mon Compte",
     "C'est quoi Safarti ?",
     'Déconnexion',
   ];
@@ -25,15 +27,19 @@ export class SafartiPage {
     console.log("Selected Item", item);
     
     switch(item){
+
+      case "Mon Compte":
+      this.navCtrl.push(MyAccountPage);
+      break;
+
+      case "C'est quoi Safarti ?":
+      console.log("Salut toi");
+      break;
+
       case 'Déconnexion':
         this.navCtrl.setRoot(FirstPage);
         this.app.getRootNavs()[0].push(FirstPage);
         break;
-
-      case "C'est quoi Safarti ?":
-        console.log("Salut toi");
-        break;
-
     }
   }
 

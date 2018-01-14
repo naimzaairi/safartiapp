@@ -8,9 +8,7 @@
 
 <div>
 <ion-card>
-
   <ion-card-content>
-
     <ion-grid>
       <ion-row align-items-center>
         <ion-col col-2>
@@ -32,8 +30,6 @@
     </ion-grid>
   
   </ion-card-content>
-
-
 </ion-card>
 
 <h1> L'organisateur </h1>
@@ -49,12 +45,18 @@
     </ion-item>
 
     <ion-card-content>
-      <ion-row>
-        <ion-icon name="call" class="org-info-icon"></ion-icon><h3 class="org-info"> 06 52 91 11 85</h3>
-      </ion-row>
-      <ion-row>
-          <ion-icon name="mail" class="org-info-icon"></ion-icon> <h3 class="org-info"> n.zaairi96@gmail.com</h3>
-      </ion-row> 
+      <ion-item>
+          <ion-icon name="mail" item-start large></ion-icon>
+          <h2 class="font-dosis">Adresse mail</h2>
+          <p>n.zaairi96@gmail.com</p>
+      </ion-item>
+          
+      <ion-item>
+          <ion-icon name="call" item-left large></ion-icon>
+          <h2 class="font-dosis">Téléphone</h2>
+          <p>06 52 91 11 67</p>
+      </ion-item>
+
       <ion-row>
         <h3 id="info-sup-title">Point de rendez-vous:</h3>
         <p id="info-sup-p">A convenir. Veuillez appeler l'organisateur.</p>
