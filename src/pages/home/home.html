@@ -1,107 +1,60 @@
-
-<!-- Version 1-->
-
-<!--<ion-header>
-  <ion-navbar>
-    <ion-title>
-      My Talks
-    </ion-title>
-  </ion-navbar>
-</ion-header>
- 
-<ion-content padding>
-  <ion-item no-padding>
-<ion-input [(ngModel)]="name" placeholder="My Awesome Talk"></ion-input>
-</ion-item>
-  <rl-tag-input
-    [(ngModel)]="topics"
-    [addOnBlur]="false"
-    [autocomplete]="true"
-    [autocompleteItems]="preparedTags"
-    placeholder="Topics">
-  </rl-tag-input>
-<br><hr>
- 
-<ion-list>
-  <ion-item *ngFor="let talk of talks">
-    {{ talk.name }}
-    <p>
-      {{ talk.topics.join(' ') }}
-    </p>
-  </ion-item>
-</ion-list>
- 
-<ion-card *ngIf="talks.length === 0">
-  <ion-card-content>No Talk found.</ion-card-content>
-</ion-card>
- 
-</ion-content>-->
-
-
-<!-- VERSION 2 -->
-<!--<ion-header>
-      
-    <ion-navbar color="primary">
-      <ion-title>
-        <img alt="logo" height=90 src="assets/images/safartilogo.png" > 
-      </ion-title>
-    </ion-navbar>
-        
-  </ion-header>-->
-
 <ion-content padding>
 
-   <div>
-        <ion-img id="logo" style="width: 210px; height: 90px;" src="assets/images/safartilogor.png"></ion-img>
-    </div>
+  <div>
+    <ion-img id="logo" style="width: 210px; height: 90px;" src="assets/images/safartilogor.png"></ion-img>
+  </div>
 
-    <div id="text-block">
-        <h2>Recherchez une destination.</h2>
-    </div>
-            <div id="home-form">
-              <ion-list id="list-form">
-                    <ion-grid>
-                      <ion-row>
-                          <ion-col col-2><ion-label>De</ion-label></ion-col>
-                          <ion-col col-10>
-                              <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-                              <ion-list *ngIf="showList">
-                                <ion-item *ngFor="let item of items">
-                                  {{ item }}
-                                </ion-item>
-                              </ion-list>
-                          </ion-col>
-                      </ion-row>
-                    </ion-grid>
-          
-                    <ion-grid>
-                        <ion-row>
-                            <ion-col col-2><ion-label>À</ion-label></ion-col>
-                            <ion-col col-10>
-                                <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
-                                <ion-list *ngIf="showList">
-                                  <ion-item *ngFor="let item of items">
-                                    {{ item }}
-                                  </ion-item>
-                                </ion-list>
-                            </ion-col>
-                        </ion-row>
-                      </ion-grid>
-          
-                          <ion-item>
-                            <ion-label>Date de départ</ion-label>
-                            <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="myDate"></ion-datetime>
-                          </ion-item>
-          
-                          <ion-item>
-                            <ion-label>Heure</ion-label>
-                            <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="myDate"></ion-datetime>
-                          </ion-item>
-          
-                          <button class="btn-red" (tap)="showResults()" ion-button full>Rechercher</button>
-            </ion-list>   
-                          <button id="btn-create" (tap)="showCreateVoyage()" ion-button outline color="primary">Créer un voyage !</button>
-                  </div>
-                  
-  
+  <div id="text-block">
+    <h2>Recherchez une destination.</h2>
+  </div>
+  <div id="home-form">
+    <ion-list id="list-form">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2>
+            <ion-label class="form-lbl">De</ion-label>
+          </ion-col>
+          <ion-col col-10>
+            <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+            <ion-list *ngIf="showList">
+              <ion-item *ngFor="let item of items">
+                {{ item }}
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2>
+            <ion-label class="form-lbl">À</ion-label>
+          </ion-col>
+          <ion-col col-10>
+            <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+            <ion-list *ngIf="showList">
+              <ion-item *ngFor="let item of items">
+                {{ item }}
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-item>
+        <ion-label class="form-lbl">Date de départ</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="form-lbl">Heure</ion-label>
+        <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+
+      <button class="btn-red" (tap)="showResults()" ion-button full>Rechercher</button>
+    </ion-list>
+    <button id="btn-create" (tap)="showCreateVoyage()" ion-button outline color="primary">Créer un voyage !</button>
+  </div>
+
+
 </ion-content>

@@ -9,7 +9,7 @@
     <ion-grid id="grid">
         <ion-row>
             <ion-col col-4>
-                <ion-img id="logo" style="width: 80px; height: 80px;" src="assets/images/lotoS.png"></ion-img>
+                <ion-img id="logo" src="assets/images/lotoS.png"></ion-img>
             </ion-col>
             <ion-col col-8>
                 <h2>Devenez membre et entrez dans l'aventure Safarti !</h2>
@@ -61,7 +61,7 @@
         </ion-item>-->
         <div ng-controller="AjaxCtrl" >
             <ion-item id="country" ng-model="country" ng-options="country for country in countries">
-                <ion-label class="form-label" fixed>Marques</ion-label>
+                <ion-label class="form-label" fixed>Marque</ion-label>
                     <ion-select >
                         <ion-option value="">{{ country }}</ion-option>
                 </ion-select>

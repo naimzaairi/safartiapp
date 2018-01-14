@@ -28,10 +28,16 @@
                 </ion-item>
 
                 <button class="btn-red" (tap)="showTabsPage()" ion-button full>Se connecter</button>
-                <div id="mdp-lost-block">
-                    <p>Vous avez oublié votre mot de passe ? <br />Ce n'est pas grave</p>
-                    <button ion-button (tap)="showForgotPasswordPage()" color="primary" clear>Appuyez-ici </button>
-                </div>
+                <ion-grid>
+                    <ion-row>
+                        <ion-col col-8>
+                            <p>Vous avez oublié votre mot de passe ? <br />Ce n'est pas grave</p>
+                        </ion-col>
+                        <ion-col col-4>
+                            <button ion-button (tap)="showForgotPasswordPage()" color="primary" clear>Appuyez-ici </button>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
             </ion-list>
         </div>
         

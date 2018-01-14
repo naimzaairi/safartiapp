@@ -10,6 +10,11 @@ page-signup {
         font-family: 'Dosis', sans-serif;
     }
 
+    ion-img{
+        width: 80px;
+        height: 80px;
+    }
+
     h2{
         font-family: 'Dosis', sans-serif;
     }
@@ -72,6 +77,21 @@ page-signup {
         align-items: center;
         flex-direction: column;
         margin-bottom: 3%;
+    }
+
+    @media only screen and (max-device-width : 320px) 
+    and (orientation : portrait){
+
+        ion-img{
+            width: 70px;
+            height: 70px;
+        }
+
+        h2{
+            font-size: 20px;
+        }
+
+
     }
 
 

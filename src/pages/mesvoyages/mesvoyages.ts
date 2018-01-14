@@ -12,8 +12,10 @@ import { MVoyParticipantPage } from '../mvoyparticipant/mvoyparticipant';
 })
 export class MesVoyagesPage {
 
-  constructor(public navCtrl: NavController) {
+  mesvoyages: string;
 
+  constructor(public navCtrl: NavController) {
+    this.mesvoyages = "preparant";
   }
 
   showMVoyPreparant(){

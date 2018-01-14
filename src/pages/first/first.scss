@@ -10,6 +10,10 @@ page-first {
 
     @import url('https://fonts.googleapis.com/css?family=Dosis:300');
 
+    .scroll-content {
+        overflow: hidden;
+      }
+
 
     .btn-red{
         display: block;
@@ -70,6 +74,37 @@ page-first {
         font-family: 'Dosis', sans-serif;
         font-size: 16px;
     }
+
+    @media only screen and (max-device-width : 320px) { 
+        ion-img{
+            top: 20%;
+        }
+
+        #logo > img{
+            width: 190px;
+            height: 173;
+            margin: 0 auto;
+        }
+
+        #menu-boutons{
+            margin-top: 45%;
+        }
+
+        #text-block > h1 {
+            font-size: 22px;
+        }
+
+        #text-block > h2{
+            font-size: 22px;
+        }
+    }
+
+    @media only screen and (min-device-height : 568px) 
+    and (orientation : portrait) {
+        #menu-boutons{
+            margin-top: 55%;
+        }
+     }
 
 
 }
