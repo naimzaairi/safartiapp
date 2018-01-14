@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { FirstPage } from '../pages/first/first';
@@ -16,7 +15,7 @@ import { CreateVoyagePage } from '../pages/createvoyage/createvoyage';
 import { ResearchDetailPage } from '../pages/researchdetail/researchdetail';
 import { MVoyParticipantPage } from '../pages/mvoyparticipant/mvoyparticipant';
 import { MVoyPreparantPage } from '../pages/mvoypreparant/mvoypreparant';
-
+import { ForgotPasswordPage } from '../pages/forgotpassword/forgotpassword';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,7 +35,8 @@ import { Camera } from '@ionic-native/camera';
     CreateVoyagePage,
     ResearchDetailPage,
     MVoyParticipantPage,
-    MVoyPreparantPage
+    MVoyPreparantPage,
+    ForgotPasswordPage
   ],
   imports: [
     BrowserModule,
@@ -56,7 +56,8 @@ import { Camera } from '@ionic-native/camera';
     CreateVoyagePage,
     ResearchDetailPage,
     MVoyParticipantPage,
-    MVoyPreparantPage
+    MVoyPreparantPage,
+    ForgotPasswordPage
   ],
   providers: [
     StatusBar,

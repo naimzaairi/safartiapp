@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AlertController } from 'ionic-angular';
+import { AlertController, App } from 'ionic-angular';
 
 import { FirstPage } from '../first/first';
+import { TabsPage } from '../tabs/tabs';
+
 
 @Component({
   selector: 'page-safarti',
@@ -10,7 +12,7 @@ import { FirstPage } from '../first/first';
 })
 export class SafartiPage {
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController, public app: App) {
 
   }
 
@@ -24,7 +26,8 @@ export class SafartiPage {
     
     switch(item){
       case 'Déconnexion':
-        this.navCtrl.push(FirstPage);
+        this.navCtrl.setRoot(FirstPage);
+        this.app.getRootNavs()[0].push(FirstPage);
         break;
 
       case "C'est quoi Safarti ?":

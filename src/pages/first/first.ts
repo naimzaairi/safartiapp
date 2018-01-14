@@ -10,7 +10,6 @@ import { SigninPage } from '../signin/signin';
 export class FirstPage {
 
   constructor(public navCtrl: NavController) {
-
   }
 
   showSignupPage(): void{
