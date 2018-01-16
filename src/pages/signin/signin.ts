@@ -3,8 +3,6 @@ import { NavController} from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs';
 import { ForgotPasswordPage } from '../forgotpassword/forgotpassword';
-import { Footer } from 'ionic-angular/components/toolbar/toolbar-footer';
-
 
 @Component({
   selector: 'page-signin',
