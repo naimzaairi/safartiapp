@@ -12,6 +12,9 @@ import { CreateVoyagePage } from '../createvoyage/createvoyage';
 export class HomePage {
 
   villes;
+  showList: boolean = false;
+  searchQuery: string = '';
+  items: string[];
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
     this.initializeItems();
@@ -52,9 +55,6 @@ export class HomePage {
     }
   }
 
-  showList: boolean = false;
-  searchQuery: string = '';
-  items: string[];
 /*
   topics = [];
   name: string;
