@@ -28,11 +28,8 @@
         </ion-item>
 
         <ion-item>
-            <ion-input type="password" placeholder="Password">abcd1</ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-input type="number" placeholder="Téléphone">0652911167</ion-input>
+            <ion-label class="form-label" fixed>Téléphone</ion-label>
+            <ion-input type="tel" pattern="0[0-9]{9}" value="0652911167"></ion-input>
         </ion-item>
 
         <div ng-controller="AjaxCtrl">

@@ -33,8 +33,8 @@
           <ion-col col-10>
             <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
             <ion-list *ngIf="showList">
-              <ion-item *ngFor="let item of items">
-                {{ item }}
+              <ion-item>
+                
               </ion-item>
             </ion-list>
           </ion-col>
@@ -45,7 +45,7 @@
         <ion-label class="form-lbl">Date de départ</ion-label>
         <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="myDate"></ion-datetime>
       </ion-item>
-
+      
       <ion-item>
         <ion-label class="form-lbl">Heure</ion-label>
         <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="myDate"></ion-datetime>
