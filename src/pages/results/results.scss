@@ -33,6 +33,14 @@ page-results {
         font-weight: bold;
     }
 
+    #rating-stars > ion-icon{
+        color: #FFC400;
+        font-size: 16px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
     .item-ios ion-avatar ion-img, .item-ios ion-avatar img{
         width: 60px;
         height: 60px;

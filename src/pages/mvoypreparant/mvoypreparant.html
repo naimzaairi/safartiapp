@@ -26,16 +26,21 @@
         </ion-col>
       </ion-row>
       <ion-row justify-content-center>
+        <ion-badge item-end id="price">80 DHS</ion-badge>
       </ion-row>
     </ion-grid>
 </ion-card>
-<button ion-button full (tap)="annulerVoyage()">Annuler Voyage</button>
+
+<button ion-button full icon-right (tap)="annulerVoyage()">
+  Annuler Voyage
+  <ion-icon id="trash-icon" name="trash" large></ion-icon>
+</button>
 
 
 <h1> Les participants </h1>
 
   <ion-card>
-      <ion-item id="org-header">
+      <ion-item id="org-header" (tap)="showPublicProfile()">
           <ion-avatar item-start>
             <img src="../assets/images/abd.jpg">
           </ion-avatar>
@@ -53,14 +58,14 @@
 
     <ion-row>
 
-    <ion-col>
+    <ion-col col-6>
       <button ion-button icon-left clear class="text-vert">
         <ion-icon name="call"></ion-icon>
         <div class="text-vert" (tap)="appelerParticipant()">Appeler</div>
       </button>
     </ion-col>
 
-    <ion-col>
+    <ion-col col-6>
       <button ion-button icon-left clear type="submit" (tap)="supprimerParticipant()">
         <ion-icon name="close-circle"></ion-icon>
         <div>Supprimer</div>

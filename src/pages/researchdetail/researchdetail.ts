@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, ToastController /*NavParams*/ } from 'ionic-angular';
 
-
+import { PublicProfilePage } from "../publicprofile/publicprofile"
 
 @Component({
   selector: 'page-researchdetail',
@@ -28,6 +28,10 @@ export class ResearchDetailPage {
     }
     );*/
   }
+
+  showPublicProfile() :void{
+    this.navCtrl.push(PublicProfilePage);
+  }  
 
   participerConfirm() {
     let alert = this.alertCtrl.create({

@@ -3,6 +3,8 @@ import { NavController, AlertController, ToastController, NavParams } from 'ioni
 /*import  { VoyageService } from '../../services/voyage-service';*/
 //import { MesVoyagesPage } from '../mesvoyages/mesvoyages';
 
+import { PublicProfilePage } from '../publicprofile/publicprofile'
+
 @Component({
   selector: 'page-mvoyparticipant',
   templateUrl: 'mvoyparticipant.html'
@@ -104,6 +106,10 @@ export class MVoyParticipantPage {
       ]
     });
     alert.present();
+  }
+
+  showPublicProfile(){
+    this.navCtrl.push(PublicProfilePage);
   }
 
 

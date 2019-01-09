@@ -3,6 +3,8 @@ import { NavController, AlertController,ToastController } from 'ionic-angular';
 //import  { VoyageService } from '../../services/voyage-service';
 //import { MesVoyagesPage } from '../mesvoyages/mesvoyages';
 
+import { PublicProfilePage } from '../publicprofile/publicprofile'
+
 @Component({
   selector: 'page-mvoypreparant',
   templateUrl: 'mvoypreparant.html'
@@ -155,6 +157,10 @@ export class MVoyPreparantPage {
 
   
     toast.present();
+  }
+
+  showPublicProfile(){
+    this.navCtrl.push(PublicProfilePage);
   }
 
 

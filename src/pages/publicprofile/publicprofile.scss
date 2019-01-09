@@ -1,0 +1,46 @@
+page-publicprofile{
+
+    @import url('https://fonts.googleapis.com/css?family=Dosis:300');
+
+    #first-item{
+        text-align: center;
+    }
+
+    #name{
+        font-weight: bold;
+    }
+
+    .font-dosis{
+        font-family: 'Dosis', sans-serif;
+        font-size: 20px;
+    }
+
+    #voyage-counter{
+        font-weight: bold;
+    }
+
+    p#rating-stars{
+        color: #B71C1C;
+        font-size: 20px;
+    }
+
+    #fb-icon{
+        color: #4057a0;
+    }
+
+    #open-btn{
+        color: #4057a0;
+    }
+
+    @media only screen and (min-device-width : 320px) and (max-device-height : 568px) 
+    and (orientation : portrait) {
+
+        .toolbar-title-ios{
+            font-size: 1.0em;
+        }
+
+        #title-rating{
+            font-size: 18px;
+        }
+    }
+}

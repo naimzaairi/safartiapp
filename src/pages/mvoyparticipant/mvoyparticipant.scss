@@ -4,8 +4,9 @@ page-mvoyparticipant{
 
 
     .scroll-content{
-        background: #EEEEEE;
+        background: #eeeeee;
     }
+
 
     h1{
         font-family: 'Dosis', sans-serif;
@@ -77,6 +78,18 @@ page-mvoyparticipant{
     #price{
         font-size: 14px;
         background-color: #000;
+    }
+
+    #close-icon{
+        font-size: 30px;
+    }
+
+    @media only screen and (max-device-width : 320px)
+    and (orientation : portrait) { 
+        
+        .toolbar-title{
+            font-size: 16px;
+        }
     }
 
 }

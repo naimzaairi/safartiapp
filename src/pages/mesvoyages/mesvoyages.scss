@@ -28,4 +28,25 @@ page-mesvoyages {
         color: #b71C1C;
     }
 
+    #toolbar-buttons{
+        margin-right: 5%;
+    }
+
+    #notification-button {            
+        position: relative;
+        width: 42px;
+        top:1px;
+        right: 1px;
+        overflow: visible!important;
+    }
+
+
+    #notifications-badge {
+        background-color: red;
+        position: absolute;
+        top: -3px;
+        right: -9px;
+        border-radius: 100%;
+    }
+
 }

@@ -1,8 +1,8 @@
 {
   "name": "Safarti",
-  "app_id": "da8a9315",
   "integrations": {
     "cordova": {}
   },
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "id": "da8a9315"
 }

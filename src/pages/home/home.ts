@@ -1,32 +1,63 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController } from 'ionic-angular';
+import { NavController, AlertController, ToastController } from 'ionic-angular';
 
 import { ResultsPage } from '../results/results';
 import { CreateVoyagePage } from '../createvoyage/createvoyage';
 
+import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireDatabase, AngularFireObject } from 'angularfire2/database';
+import { Profile } from '../../models/profile';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
+
+  profileData : Observable<any>
 
   villes;
   showList: boolean = false;
   searchQuery: string = '';
   items: string[];
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
-    this.initializeItems();
+  constructor(private afAuth: AngularFireAuth, private afDatabase: AngularFireDatabase, public navCtrl: NavController, public alertCtrl: AlertController,
+    public toast: ToastController) {
+    this.initializeItems(); 
   }
+
+  ionViewWillLoad(){
+    this.afAuth.authState.subscribe(data => {
+      if(data && data.email && data.uid){
+        this.toast.create({
+          message: `Bienvenue sur Safarti !`,
+          duration: 3000
+        }).present();
+
+        //this.profileData = this.afDatabase.object('profile').valueChanges();
+        this.profileData = this.afDatabase.object(`profile/${data.uid}`).valueChanges();
+        //this.profileData = this.afDatabase.object(`user/${data.uid}`).valueChanges();
+      }
+      else{
+        this.toast.create({
+          message: 'Impossible de trouver les informations.',
+          duration: 3000
+        }).present();
+      }
+      
+    });
+  }
+
 
   initializeItems() {
     this.items = [
-      'Amsterdam',
-      'Berlin',
-      'Bueno Aires',
-      'Madrid',
-      'Paris',
+      'Tanger',
+      'Tetouan',
+      'Rabat',
+      'Marrakech',
+      'Agadir',
       'Casablanca'
     ];
   }
@@ -180,7 +211,7 @@ export class HomePage {
     }
   }
 */
-  //SQL DES VILLES DU MAROC : https://github.com/alaouy/sql-moroccan-cities/blob/master/ville.sql
+  //SQL DES VILLES DU MAROC : https://github.com/alaouy/sql-moroccan-cities
 
   showResults() : void{
       this.navCtrl.push(ResultsPage);

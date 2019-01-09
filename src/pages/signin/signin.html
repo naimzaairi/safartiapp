@@ -20,14 +20,14 @@
                 </div>
 
                 <ion-item id="first-input">
-                    <ion-input class="form-label" type="text" value="" placeholder="Email"></ion-input>
+                    <ion-input class="form-label" type="text" placeholder="Email" [(ngModel)]="user.email"></ion-input>
                 </ion-item>
 
                 <ion-item>
-                    <ion-input class="form-label" type="password"  placeholder="Mot de passe"></ion-input>
+                    <ion-input class="form-label" type="password"  placeholder="Mot de passe" [(ngModel)]="user.password"></ion-input>
                 </ion-item>
 
-                <button class="btn-red" (tap)="showTabsPage()" ion-button full>Se connecter</button>
+                <button class="btn-red" (tap)="login(user)" ion-button full>Se connecter</button>
                 <ion-grid>
                     <ion-row>
                         <ion-col col-8>

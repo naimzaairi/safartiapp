@@ -32,6 +32,8 @@
   </ion-card-content>
 </ion-card>
 
+<button ion-button full round id="participate-button" (tap)="participerConfirm()">Participer</button>
+
 <h1> L'organisateur </h1>
 
   <ion-card>
@@ -42,6 +44,9 @@
       </ion-avatar>
         <h2>Naïm Zaaïri</h2>
         <p>BMW Serie 1</p>
+        <button ion-button icon-left clear item-end (tap)="showPublicProfile()">
+          <div>Voir profil</div>
+      </button>
     </ion-item>
 
     <ion-card-content>
@@ -57,6 +62,15 @@
           <p>06 52 91 11 67</p>
       </ion-item>
 
+      <ion-item>
+        <h2 class="font-dosis" id="title-rating">Note</h2>
+        <p id="rating-stars"><ion-icon name="star" item-left large></ion-icon>
+        <ion-icon name="star" item-left large></ion-icon>
+        <ion-icon name="star" item-left large></ion-icon>
+        <ion-icon name="star" item-left large></ion-icon>
+        <ion-icon name="star" item-left large></ion-icon></p>
+      </ion-item>
+
       <ion-row>
         <h3 id="info-sup-title">Point de rendez-vous:</h3>
         <p id="info-sup-p">A convenir. Veuillez appeler l'organisateur.</p>
@@ -68,15 +82,9 @@
     </ion-card-content>
 
     <ion-row>
-
-      <ion-col>
-        <button ion-button full round class="organisateur-button" id="participate-button" (tap)="participerConfirm()">Participer</button>
-      </ion-col>
-
       <ion-col>
         <button ion-button full round color="light"class="organisateur-button" id="call-button" (tap)="appelerOrganisateur()">Appeler</button>
       </ion-col>
-
     </ion-row>
 </ion-card>      
 </div>

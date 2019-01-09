@@ -40,12 +40,14 @@ page-researchdetail{
         font-family: 'Dosis', sans-serif;
     }
 
-    .organisateur-button{
-        display: block;
-        margin: 0 auto;
+    #participate-button{
         font-family: 'Dosis', sans-serif;
-        font-size: 16px;
+        font-size: 18px;
+    }
 
+    #call-button{
+        font-family: 'Dosis', sans-serif;
+        font-size: 18px;
     }
 
     .org-info{
@@ -67,6 +69,16 @@ page-researchdetail{
     #info-sup-p{
         padding: 2%;
         width: 100%;
+    }
+
+    .font-dosis{
+        font-family: 'Dosis', sans-serif;
+        font-size: 20px;
+    }
+
+    p#rating-stars{
+        color: #B71C1C;
+        font-size: 20px;
     }
     
 }

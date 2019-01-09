@@ -19,7 +19,7 @@
         </ion-col>
         <ion-col col-10>
               <div class="voyage-info">
-                  <p id="trajet-cities">Casablanca - Marrakech</p>
+                  <p id="trajet-cities">Casablanca - El Jadida</p>
                   <p>Jour: 27/12/2017</p>
                   <p>Heure: 13:30 </p>
                 </div>
@@ -32,7 +32,10 @@
 
 </ion-card>
 
-<button ion-button full (tap)="annulerVoyage()">Annuler Participation</button>
+  <button ion-button full icon-left (tap)="annulerVoyage()">
+    <ion-icon id="close-icon" name="close" large></ion-icon>
+    Annuler Participation
+  </button>
 
 <h1> L'organisateur </h1>
 
@@ -71,10 +74,13 @@
             <h3 id="info-sup-title">Informations supplémentaires:</h3>
             <p id="info-sup-p">S'il vous plait soyez à l'heure au point de RDV. Ne mangez pas dans la voiture.</p>
           </ion-row>
+          <button ion-button full icon-left (tap)="showPublicProfile()">
+              <ion-icon name="contact"></ion-icon>
+              Voir Profil
+          </button>
         </ion-card-content>
 
     <ion-row>
-
   </ion-row>
   </ion-card>          
 </div>
@@ -82,7 +88,7 @@
 <h1>Les participants</h1>
 
 <ion-card>
-    <ion-item id="org-header">
+    <ion-item id="org-header" (tap)="showPublicProfile()">
         <ion-avatar item-start>
           <img src="../assets/images/abd.jpg">
         </ion-avatar>

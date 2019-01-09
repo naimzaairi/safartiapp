@@ -7,59 +7,55 @@
 <ion-content padding scroll="false">
 
     <ion-grid id="grid">
-        <ion-row>
-            <ion-col col-4>
+        <ion-row justify-content-center>
+            <ion-col col-4 col-sm-4>
                 <ion-img id="logo" src="assets/images/lotoS.png"></ion-img>
             </ion-col>
-            <ion-col col-8>
+            <ion-col col-8 col-sm-8>
                 <h2>Devenez membre et entrez dans l'aventure Safarti !</h2>
             </ion-col>
         </ion-row>
     </ion-grid>
 
-    <div>
-       
-    </div>
-
-    <h2 class="text-red"> Veuillez remplir les informations</h2>
+    <h2> Commencez par vous inscrire</h2>
 
     <ion-list>
 
-        <div id="photo-loader"> 
+        <!--<div id="photo-loader"> 
             <ion-label id="lbl-photo" class="form-label">Photo de profil</ion-label>
             <img id="image-loaded" [src]="base64Image" *ngIf="base64Image" (click)="accessGallery()"/>
             <button id="choose-btn" ion-button color="primary" (click)="accessGallery()">Choisir</button>
-        </div>
-        <ion-item>
+        </div>-->
+        <!--<ion-item>
             <ion-label class="form-label" fixed>Nom </ion-label>
-            <ion-input type="text" value=""></ion-input>
+            <ion-input type="text" [(ngModel)]="user.nom"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label class="form-label" fixed>Prénom</ion-label>
-            <ion-input type="text"></ion-input>
-        </ion-item>
+            <ion-input type="text" [(ngModel)]="user.prenom"></ion-input>
+        </ion-item>-->
 
         <ion-item>
             <ion-label class="form-label" fixed>Email</ion-label>
-            <ion-input type="text"></ion-input>
+            <ion-input type="text" [(ngModel)]="user.email"></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label class="form-label" fixed>Password</ion-label>
-            <ion-input type="password"></ion-input>
-        </ion-item>
-
-        <ion-item>
-            <ion-label class="form-label" fixed>Téléphone</ion-label>
-            <ion-input type="number"></ion-input>
+            <ion-input type="password" [(ngModel)]="user.password"></ion-input>
         </ion-item>
 
         <!--<ion-item>
-            <ion-label class="form-label" fixed>Modèle Voiture</ion-label>
-            <ion-input type="text" value=""></ion-input>
+            <ion-label class="form-label" fixed>Téléphone</ion-label>
+            <ion-input type="number" [(ngModel)]="user.telephone"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label class="form-label" fixed>Véhicule</ion-label>
+            <ion-input type="text" [(ngModel)]="user.vehicule"></ion-input>
         </ion-item>-->
-        <div ng-controller="AjaxCtrl" >
+        <!--<div ng-controller="AjaxCtrl" > 
             <ion-item id="country" ng-model="country" ng-options="country for country in countries">
                 <ion-label class="form-label" fixed>Marque</ion-label>
                     <ion-select >
@@ -73,10 +69,10 @@
                     </ion-select>
                 </ion-item>
 
-        </div>
+        </div>-->
 
-
-        <button class="btn-red" (tap)="showTabsPage()" ion-button full>S'inscrire !</button>
+        <button class="btn-red" (click)="register(user)" ion-button full>S'inscrire !</button>
+        <button ion-button block icon-button id="fb-register">S'inscrire avec Facebook</button>
 
     </ion-list>
   

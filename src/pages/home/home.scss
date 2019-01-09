@@ -86,7 +86,15 @@ page-home {
             height: 15px;
         }
 
-   }
+    }
+
+    @media screen and (min-width : 585px){
+
+        #text-block h2{
+            margin-top: 20%;
+        }
+
+    }
 
 
 

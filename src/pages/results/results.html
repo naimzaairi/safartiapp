@@ -11,31 +11,20 @@
       
             <div id="menu-signin">
                 <ion-list>
-                    <button ion-item (tap)="showResearchDetail()">
-                        <ion-avatar item-start>
-                            <img src="../assets/images/naim.jpg">
-                        </ion-avatar>
-                        <h2 class="trajet-title">Casablanca</h2> 
-                        <h2 class="trajet-title">Marrakech</h2>
-                        <span> 27/12/2017</span><br />
-                        <span id="schedule">13:30</span>
-                        <p>Naïm</p>
-                        <ion-badge item-end id="price">80 DHS</ion-badge>
-                        <!--<span id="price" item-right>80 DHS</span>-->
-                    </button>
-                    <button ion-item (tap)="showResearchDetail()">
-                            <ion-avatar item-start>
-                                <img src="../assets/images/abd.jpg">
-                            </ion-avatar>
-                            <h2 class="trajet-title">Casablanca</h2> 
-                            <h2 class="trajet-title">Marrakech</h2>
-                            <span> 27/12/2017</span><br />
-                            <span id="schedule">16:15</span>
-                            <p>Abdelilah</p>
-                            <ion-badge item-end id="price">70 DHS</ion-badge>
-                            <!--<span id="price" item-right>70 DHS</span>-->
-                            <!--<button ion-button clear item-right (tap)="showResearchDetail(voyage.id)">View</button>-->
-                    </button>
+                    <ion-item *ngFor="let voyage of voyageListRef$ | async">
+                        <button ion-item (tap)="showResearchDetail()">
+                                <!--<ion-avatar item-start>
+                                    <img src="../assets/images/naim.jpg">
+                                </ion-avatar>-->
+                                <h2 class="trajet-title">{{ voyage.depart }} - {{ voyage.destination }}</h2>
+                                <span>{{ voyage.date }}</span><br />
+                                <span id="schedule">{{ voyage.heure }}</span>
+                                <p>Naïm</p>
+                                <ion-badge item-end id="price">{{ voyage.prix }} DHS</ion-badge>
+                                <!--<span id="price" item-right>80 DHS</span>-->
+                            </button>
+                    </ion-item>
+                    
                 </ion-list>
             </div>
               

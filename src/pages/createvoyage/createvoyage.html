@@ -15,45 +15,45 @@
 
               <ion-item>
                   <ion-label class="form-label">Départ</ion-label>
-                  <ion-input type="text"></ion-input>
+                  <ion-input type="text" [(ngModel)]="voyage.depart"></ion-input>
               </ion-item>
 
                 <ion-item>
                     <ion-label class="form-label">Destination</ion-label>
-                    <ion-input type="text"></ion-input>
+                    <ion-input type="text" [(ngModel)]="voyage.destination"></ion-input>
                 </ion-item>
 
                 <ion-item>
                   <ion-label class="form-label">Date</ion-label>
-                  <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="myDate"></ion-datetime>
+                  <ion-datetime displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" [(ngModel)]="voyage.date"></ion-datetime>
                 </ion-item>
 
                 <ion-item>
                   <ion-label class="form-label">Heure</ion-label>
-                  <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="myDate"></ion-datetime>
+                  <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="voyage.heure"></ion-datetime>
                 </ion-item>
 
                 <ion-item>
                   <ion-label class="form-label">Prix</ion-label>
-                  <ion-input id="price" text-input-ios-margin-left type="number" ng-model="amount" aria-label="amount"><span id="currency-default">{{amount | currency}}</span></ion-input>
+                  <ion-input id="price" text-input-ios-margin-left type="number" ng-model="amount" aria-label="amount" [(ngModel)]="voyage.prix"><span id="currency-default">{{amount | currency}}</span></ion-input>
                   <span item-end class="form-label">DHS</span>
                 </ion-item>
 
                 <ion-item>
                     <ion-label class="form-label">Places</ion-label>
-                    <ion-input type="number"></ion-input>
+                    <ion-input type="number" [(ngModel)]="voyage.places"></ion-input>
                 </ion-item>
 
                 <ion-item>
                     <ion-label class="form-label">Rendez-vous</ion-label>
-                    <ion-input type="text"></ion-input>
+                    <ion-input type="text" [(ngModel)]="voyage.rdv"></ion-input>
                 </ion-item>
-
+ 
                 <ion-item>
-                    <ion-textarea placeholder="Informations supplémentaires" type="text"></ion-textarea>
+                    <ion-textarea placeholder="Informations supplémentaires" type="text" [(ngModel)]="voyage.infos"></ion-textarea>
                 </ion-item>
 
-                <button class="btn-red" ion-button full color="primary">Je crée mon voyage !</button>
+                <button class="btn-red" ion-button full color="primary" (click)="createVoyage(voyage)">Je crée mon voyage !</button>
 
             </ion-list>
 
@@ -63,3 +63,4 @@
   
 
 </ion-content>
+

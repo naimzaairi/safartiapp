@@ -1,5 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule,  } from '@angular/forms';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
@@ -18,11 +19,19 @@ import { MVoyPreparantPage } from '../pages/mvoypreparant/mvoypreparant';
 import { ForgotPasswordPage } from '../pages/forgotpassword/forgotpassword';
 import { MyAccountPage } from '../pages/myaccount/myaccount';
 import { ModifyAccountPage } from '../pages/modifyaccount/modifyaccount';
+import { PublicProfilePage } from '../pages/publicprofile/publicprofile';;
+
+//Firebase
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database'
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { Camera } from '@ionic-native/camera';
+import { FIREBASE_CONFIG } from './app.firebase.config';
+import { CreateProfilePage } from '../pages/createprofile/createprofile';
 
 @NgModule({
   declarations: [
@@ -41,11 +50,18 @@ import { Camera } from '@ionic-native/camera';
     MVoyPreparantPage,
     ForgotPasswordPage,
     MyAccountPage,
-    ModifyAccountPage
+    ModifyAccountPage,
+    PublicProfilePage,
+    CreateProfilePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    FormsModule,
+    ReactiveFormsModule,
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(FIREBASE_CONFIG),
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -64,7 +80,9 @@ import { Camera } from '@ionic-native/camera';
     MVoyPreparantPage,
     ForgotPasswordPage,
     MyAccountPage,
-    ModifyAccountPage
+    ModifyAccountPage,
+    PublicProfilePage,
+    CreateProfilePage
   ],
   providers: [
     StatusBar,

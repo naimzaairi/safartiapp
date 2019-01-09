@@ -73,4 +73,21 @@ page-mvoypreparant{
         font-weight: bold;
     }
 
+    #price{
+        font-size: 14px;
+        background-color: #000;
+    }
+
+    #trash-icon{
+        font-size: 22px;
+    }
+
+    @media only screen and (max-device-width : 320px)
+    and (orientation : portrait) { 
+        
+        .toolbar-title{
+            font-size: 16px;
+        }
+    }
+
 }
