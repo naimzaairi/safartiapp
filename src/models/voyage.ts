@@ -1,13 +1,14 @@
-import { DateTime } from "ionic-angular";
+import { Profile } from "./profile";
 
 export interface Voyage {
+    key?: string;
     depart: string;
     destination: string;
-    date: DateTime;
-    heure: DateTime;
+    date: string;
+    heure: string;
     prix: number;
     places: number;
-    rdv: Text;
-    infos: Text;
-    organisateur: string;
+    rdv: string;
+    infos: string;
+    participants: Profile[];
 }

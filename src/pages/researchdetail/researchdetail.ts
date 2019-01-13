@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, AlertController, ToastController /*NavParams*/ } from 'ionic-angular';
+import { NavController, AlertController, ToastController, NavParams } from 'ionic-angular';
 
-import { PublicProfilePage } from "../publicprofile/publicprofile"
+import { PublicProfilePage } from "../publicprofile/publicprofile";
+
+import { AngularFireDatabase} from 'angularfire2/database';
 
 @Component({
   selector: 'page-researchdetail',
@@ -9,24 +11,17 @@ import { PublicProfilePage } from "../publicprofile/publicprofile"
 })
 export class ResearchDetailPage {
 
-  /*voyageInfo: any;
-  currUser;*/
+  
 
-  constructor(public navCtrl: NavController/*, private auth: AuthService, private voyage: VoyageService, private navParams: NavParams,*/,private toastCtrl: ToastController, public alertCtrl: AlertController) {
-    /*let voyageId = navParams.get("voyageId");
-    this.currUser = this.auth.getUserInfo();;
-    this.voyage.infoVoyage(voyageId).subscribe(data=>{
-      if(data){
-        this.voyageInfo = data;
-        console.log(this.voyageInfo);
-      }else{
-        this.showInformation(data);
-      }
-    },
-    error =>{
+  constructor(public navCtrl: NavController, private toastCtrl: ToastController, 
+    public alertCtrl: AlertController, public navParams: NavParams, private afDatabase: AngularFireDatabase) {
+    
+    
 
-    }
-    );*/
+  }
+
+  ionViewDidLoad(){
+    console.log(this.navParams.get('voyage'));
   }
 
   showPublicProfile() :void{

@@ -11,18 +11,17 @@
       
             <div id="menu-signin">
                 <ion-list>
-                    <ion-item *ngFor="let voyage of voyageListRef$ | async">
-                        <button ion-item (tap)="showResearchDetail()">
-                                <!--<ion-avatar item-start>
-                                    <img src="../assets/images/naim.jpg">
-                                </ion-avatar>-->
-                                <h2 class="trajet-title">{{ voyage.depart }} - {{ voyage.destination }}</h2>
-                                <span>{{ voyage.date }}</span><br />
-                                <span id="schedule">{{ voyage.heure }}</span>
-                                <p>Naïm</p>
-                                <ion-badge item-end id="price">{{ voyage.prix }} DHS</ion-badge>
-                                <!--<span id="price" item-right>80 DHS</span>-->
-                            </button>
+                    <ion-item *ngFor="let voyage of voyageListRef$ | async"
+                    detail-push navPush="detailsPage">
+                        <!--<ion-avatar item-start>
+                            <img src="../assets/images/naim.jpg">
+                        </ion-avatar>-->
+                        <h2 class="trajet-title">{{ voyage.depart }} - {{ voyage.destination }}</h2>
+                        <span>{{ voyage.date }}</span><br />
+                        <span id="schedule">{{ voyage.heure }}</span>
+                        <p>Naïm</p>
+                        <ion-badge item-end id="price">{{ voyage.prix }} DHS</ion-badge>
+                        <!--<span id="price" item-right>80 DHS</span>-->
                     </ion-item>
                     
                 </ion-list>

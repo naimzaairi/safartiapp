@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 
 import { AngularFireAuth } from 'angularfire2/auth'
-import { AngularFireDatabase, AngularFireList} from 'angularfire2/database';
+import { AngularFireDatabase} from 'angularfire2/database';
 
 import { Voyage } from '../../models/voyage';
 import { HomePage } from '../home/home';
+import { VoyageService } from '../../services/voyage.service';
 
 @Component({
   selector: 'page-createvoyage',
@@ -13,42 +14,55 @@ import { HomePage } from '../home/home';
 })
 export class CreateVoyagePage {
 
-  voyage = {} as Voyage;
-
-  voyageRef$: AngularFireList<Voyage>;
   userId: string;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController,
-    private afDatabase: AngularFireDatabase, private afAuth: AngularFireAuth) {
+  voyage: Voyage = {
+    depart: '',
+    destination: '',
+    date: '',
+    heure: '',
+    prix: undefined,
+    places: undefined,
+    rdv: '',
+    infos: '',
+    participants: []
 
-      this.afAuth.authState.subscribe(user => {
+  };
+
+
+
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController,
+    private afDatabase: AngularFireDatabase, private afAuth: AngularFireAuth, 
+    private voyageService: VoyageService) {
+
+    this.afAuth.authState.subscribe(user => {
         if(user) this.userId = user.uid
       })
 
-      this.voyageRef$ = this.afDatabase.list(`voyage-list/${this.userId}`);
   }
 
   createVoyage(voyage: Voyage){
 
-    this.afAuth.authState.subscribe(auth => {
       if(this.afAuth.auth){
-        this.voyageRef$.push({
-          depart: this.voyage.depart,
-          destination: this.voyage.destination,
-          date: this.voyage.date,
-          heure: this.voyage.heure,
-          prix: Number(this.voyage.prix),
-          places: Number(this.voyage.places),
-          rdv: this.voyage.rdv,
-          infos: this.voyage.infos,
-          organisateur: this.userId
-        })
-        .then(() => this.navCtrl.setRoot(HomePage));
-      }
-      
-  })
+        this.voyageService.addVoyage(voyage).then(ref =>{
 
-    
+          const alert = this.alertCtrl.create({
+            title: 'Voyage Crée!',
+            subTitle: 'Votre voyage a bien été crée. Vous pouvez le retrouver dans Mes Voyages',
+            buttons: [
+              {
+                text: 'Ok',
+                handler: ()=> {
+                  this.navCtrl.setRoot(HomePage, { key: ref.key });
+                  console.log(ref.key); 
+                  console.log('Ok clicked');
+                }
+              },
+            ]
+          });
+          alert.present();
+        })
+      }
 
     console.log(voyage);
 
